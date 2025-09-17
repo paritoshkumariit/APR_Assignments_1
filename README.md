@@ -50,7 +50,7 @@ The distributions of features by email type (Image 2) provide a visual explanati
 
 Conversely, the distributions for `uppercase_words`, `exclamations`, and `punct_ratio` provide a much clearer separation. The majority of non-spam emails exhibit values near zero for these features, while the spam class shows distinct, non-zero distributions. For example, the distribution for `exclamations` in spam emails is multi-modal, with notable peaks at specific values. This pattern suggests that different types of spam emails may employ distinct stylistic tactics, such as a single exclamation point for urgency or multiple ones for emphasis. The strong signals provided by these features are fundamental to the project's ability to classify with high accuracy.
 
-![Image 2](data distribution.png)
+![Image 2](https://github.com/paritoshkumariit/APR_Assignments_1/blob/851b08635f42c01028cb1050bffac63fd400da23/data%20distribution.png)
 
 # 3. Methodology: A Supervised Learning Approach
 ## 3.1. Technical Stack and Libraries
@@ -68,7 +68,7 @@ Given the nature of the dataset, which is already numerically encoded, extensive
 ### 3.3. Model Selection and Training
 The project's objective of binary classification, combined with its feature-rich, quantitative dataset, indicates the use of a classical supervised machine learning classifier. Potential models include Logistic Regression, a Support Vector Machine (SVM), or a tree-based ensemble method like Random Forest or Gradient Boosting. The model was trained on a portion of the dataset and validated on a held-out test set, as is standard practice.
 
-![Image 1](correlation matrix.png)
+![Image 1](https://github.com/paritoshkumariit/APR_Assignments_1/blob/851b08635f42c01028cb1050bffac63fd400da23/correlation%20matrix.png)
 
 ## 4. Results and Critical Performance Analysis
 ### 4.1. Model Evaluation Metrics
@@ -92,7 +92,7 @@ The model achieved a perfect score of 1.00 on all four metrics, as visually repr
 | Recall |	1.00 |
 | F1-score |	1.00 | 
 
-![Image 4](model evaluation metrics.png)
+![Image 4](https://github.com/paritoshkumariit/APR_Assignments_1/blob/851b08635f42c01028cb1050bffac63fd400da23/model%20evaluation%20metrics.png)
 
 ### 4.2. Confusion Matrix Analysis
 The confusion matrix (Image 3) provides a detailed breakdown of the model's predictions on the test set.
@@ -107,7 +107,7 @@ The confusion matrix (Image 3) provides a detailed breakdown of the model's pred
 
 A key observation from the confusion matrix is the complete absence of both False Positives and False Negatives. In the context of spam filtering, minimizing false positives is considered critically important, as marking a legitimate email as spam is highly undesirable. The model's ability to achieve a zero false positive rate is a significant result. Furthermore, the perfect recall on the spam class, which represents the minority class in the test set (318 out of 2000 total samples), is statistically remarkable.  
 
-![Image 3](confusion matrix.png)
+![Image 3](https://github.com/paritoshkumariit/APR_Assignments_1/blob/851b08635f42c01028cb1050bffac63fd400da23/confusion%20matrix.png)
 
 ### 4.3. Analysis of the Perfect Score Anomaly
 While the perfect scores are a positive outcome, they also necessitate a critical assessment of the underlying factors. In a real-world machine learning application, such performance is highly unusual. The following are potential explanations for these results:
@@ -146,3 +146,37 @@ To run this project, the following dependencies must be installed. A requirement
 - `seaborn`
 
 - `matplotlib`
+
+
+### 6.2. Installation and Execution
+This project can be run in either a local Jupyter Notebook environment or a Google Colab notebook.
+
+***Jupyter Notebook:***
+
+1. Clone the repository to your local machine:
+
+```
+git clone https://github.com/your-username/spam-email-classification.git
+cd spam-email-classification
+```
+2. Place the dataset file (.csv) in the project's root directory.
+
+
+3. Launch Jupyter Notebook from your terminal:
+
+```
+jupyter notebook
+```
+4. In the Jupyter interface, navigate to and open the APR_Assignment_I.ipynb file.
+
+5. Run all the cells in the notebook to see the full analysis and model execution.
+
+***Google Colab:***
+
+1. Open Google Colab in your web browser.
+
+2. Click on `File > Upload notebook` and select `APR_Assignment_I.ipynb` from your local machine to upload it.
+
+3. Upload the `email classification cleaned dataset.csv` dataset file directly to the Colab environment by using the file explorer icon in the left-hand sidebar.
+
+4. Run all the cells in the notebook to execute the project.
